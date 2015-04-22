@@ -1,8 +1,8 @@
 <launch>
   <param name="robot_description" textfile="$(find zumy_description)/urdf/zumy.urdf"/>
-  <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find zumy_description)/launch/zumy.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find zumy_description)/launch/zumy.xacro"/>
   <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher"/>
   <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher">
-    <param use_gui="TRUE"/> 
+    <param name="use_gui" value="TRUE"/> 
   </node>
 </launch>

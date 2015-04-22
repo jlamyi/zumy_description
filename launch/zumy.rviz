@@ -80,10 +80,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        world:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -96,14 +92,12 @@ Visualization Manager:
       Frames:
         All Enabled: false
         base_link:
-          Value: false
-        lwheel:
-          Value: false
-        rwheel:
-          Value: false
-        scanner:
           Value: true
-        world:
+        lwheel:
+          Value: true
+        rwheel:
+          Value: true
+        scanner:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -111,20 +105,19 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        world:
-          base_link:
-            lwheel:
-              {}
-            rwheel:
-              {}
-            scanner:
-              {}
+        base_link:
+          lwheel:
+            {}
+          rwheel:
+            {}
+          scanner:
+            {}
       Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: world
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -157,10 +150,10 @@ Visualization Manager:
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.580398
+      Pitch: 0.415398
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.600394
+      Yaw: 6.13358
     Saved: ~
 Window Geometry:
   Displays:

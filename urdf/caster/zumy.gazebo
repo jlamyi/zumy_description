@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<robot>
+  <static>false</static>
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/zumy</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <!-- base_link -->
+  <gazebo type="revolute" reference="base_link">
+    <!--material>Gazebo/Black</material-->
+
+  <collision name='caster_collision'>
+    <pose>-0.08 0 1 0 0 0</pose>
+    <geometry>
+      <sphere>
+	<radius>.05</radius>
+      </sphere>
+    </geometry>
+
+    <surface>
+      <friction>
+	<ode>
+	  <mu>0</mu>
+	  <mu2>0</mu2>
+	  <slip1>1.0</slip1>
+	  <slip2>1.0</slip2>
+	</ode>
+      </friction>
+    </surface>
+  </collision>
+
+  <visual name='caster_visual'>
+    <pose>-0.08 0 -0.025 0 0 0</pose>
+    <geometry>
+      <sphere>
+	<radius>.05</radius>
+      </sphere>
+    </geometry>
+    <material>Gazebo/Orange</material>
+  </visual>
+
+  </gazebo>
+
+  <!-- lwheel -->
+  <gazebo reference="lwheel">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- rwheel -->
+  <gazebo reference="rwheel">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+
+
+</robot>
